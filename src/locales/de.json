@@ -1,0 +1,26 @@
+{
+  "pageTitle": "YAROSLAV_ZGHOBA // SYS.OVERRIDE",
+  "pageDescription": "Yaroslav Zghoba — Kotlin Multiplatform und Backend Entwickler, der robuste Software für neue und ungewöhnliche Welten erstellt.",
+  
+  "navBrand": "SYS.STATUS: [OK]",
+  "navWelcome": "01_INIT",
+  "navProjects": "02_PRJCT",
+  "navContact": "03_KOMM",
+  
+  "greetingBlockFirstCardHeader": "&gt; root_access // BENUTZER: YAROSLAV",
+  "greetingBlockFirstCardAboveTitle": "KOTLIN / BACKEND / SYSTEME",
+  "greetingBlockFirstCardTitle": "YAROSLAV_\nZGHOBA",
+  "greetingBlockFirstCardDescription": "Ich entwickle fokussierte Software, die auch dann noch funktioniert, wenn der Glanz verflogen ist – von Kotlin-Multiplatform-Tools bis hin zu resilienten Backend-Systemen.",
+  "greetingBlockFirstCardProgressBarLeft": "SYSTEM: STABIL",
+  "greetingBlockFirstCardProgressBarRight": "NATUR: 78% ABDECKUNG",
+  "greetingBlockSecondCardHeader": "&gt; telemetrie // LIVE",
+  "greetingBlockSecondCardBasePropName": "BASIS",
+  "greetingBlockSecondCardBase": "Sterbfritz / DE",
+  "greetingBlockSecondCardPrimaryPropName": "PRIMÄR",
+  "greetingBlockSecondCardPrimary": "KOTLIN",
+  "greetingBlockSecondCardChannelPropName": "KANAL",
+  "greetingBlockSecondCardChannel": "OFFEN",
+  "greetingBlockSecondCardThreatPropName": "BEDROHUNG",
+  "greetingBlockSecondCardThreat": "NIEDRIG",
+  "greetingBlockScrollHint": "SCROLLEN_ZUM_SCANNEN ↓"
+}

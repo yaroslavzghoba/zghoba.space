@@ -1,0 +1,26 @@
+{
+  "pageTitle": "YAROSLAV_ZGHOBA // SYS.OVERRIDE",
+  "pageDescription": "Ярослав Згоба — Kotlin Multiplatform і Backend розробник, який створює надійне програмне забезпечення для нових і непередбачуваних світів.",
+  
+  "navBrand": "СТАТУС.СИСТЕМИ: [OK]",
+  "navWelcome": "01_СТРТ",
+  "navProjects": "02_ПРКТ",
+  "navContact": "03_КОММ",
+  
+  "greetingBlockFirstCardHeader": "&gt; root_access // КОРИСТУВАЧ: YAROSLAV",
+  "greetingBlockFirstCardAboveTitle": "KOTLIN / BACKEND / СИСТЕМИ",
+  "greetingBlockFirstCardTitle": "YAROSLAV_\nZGHOBA",
+  "greetingBlockFirstCardDescription": "Я створюю сфокусоване програмне забезпечення, яке продовжує працювати навіть після того, як зникає зовнішній блиск, — від інструментів Kotlin Multiplatform до стійких бекенд-систем.",
+  "greetingBlockFirstCardProgressBarLeft": "СИСТЕМА: СТАБІЛЬНА",
+  "greetingBlockFirstCardProgressBarRight": "ПРИРОДА: 78% ПОКРИТТЯ",
+  "greetingBlockSecondCardHeader": "&gt; телеметрія // LIVE",
+  "greetingBlockSecondCardBasePropName": "БАЗА",
+  "greetingBlockSecondCardBase": "Sterbfritz / DE",
+  "greetingBlockSecondCardPrimaryPropName": "ОСНОВНИЙ",
+  "greetingBlockSecondCardPrimary": "KOTLIN",
+  "greetingBlockSecondCardChannelPropName": "КАНАЛ",
+  "greetingBlockSecondCardChannel": "ВІДКРИТИЙ",
+  "greetingBlockSecondCardThreatPropName": "ЗАГРОЗА",
+  "greetingBlockSecondCardThreat": "НИЗЬКА",
+  "greetingBlockScrollHint": "ГОРТАТИ_ДЛЯ_СКАНУВАННЯ ↓"
+}

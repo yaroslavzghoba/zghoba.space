@@ -1,0 +1,26 @@
+{
+  "pageTitle": "YAROSLAV_ZGHOBA // SYS.OVERRIDE",
+  "pageDescription": "Yaroslav Zghoba — Kotlin Multiplatform and backend developer building durable software for strange new worlds.",
+  
+  "navBrand": "SYS.STATUS: [OK]",
+  "navWelcome": "01_INIT",
+  "navProjects": "02_PRJCT",
+  "navContact": "03_COMMS",
+  
+  "greetingBlockFirstCardHeader": "&gt; root_access // USER: YAROSLAV",
+  "greetingBlockFirstCardAboveTitle": "KOTLIN / BACKEND / SYSTEMS",
+  "greetingBlockFirstCardTitle": "YAROSLAV_\nZGHOBA",
+  "greetingBlockFirstCardDescription": "I build focused software that keeps working after the shiny parts have worn away — from Kotlin Multiplatform tools to resilient backend systems.",
+  "greetingBlockFirstCardProgressBarLeft": "SYSTEM: STABLE",
+  "greetingBlockFirstCardProgressBarRight": "NATURE: 78% COVERAGE",
+  "greetingBlockSecondCardHeader": "&gt; telemetry // LIVE",
+  "greetingBlockSecondCardBasePropName": "BASE",
+  "greetingBlockSecondCardBase": "Sterbfritz / DE",
+  "greetingBlockSecondCardPrimaryPropName": "PRIMARY",
+  "greetingBlockSecondCardPrimary": "KOTLIN",
+  "greetingBlockSecondCardChannelPropName": "CHANNEL",
+  "greetingBlockSecondCardChannel": "OPEN",
+  "greetingBlockSecondCardThreatPropName": "THREAT",
+  "greetingBlockSecondCardThreat": "LOW",
+  "greetingBlockScrollHint": "SCROLL_TO_SCAN ↓"
+}
