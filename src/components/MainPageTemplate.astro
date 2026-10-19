@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';  // base layout.
+const { lang, t } = Astro.props;                       // get a locale and an obj with translations.
+---
+
+<BaseLayout title={t.pageTitle} description={t.pageDescription} lang={lang}>
+  <nav class="so-sys-nav" aria-label="Primary navigation">
+    <div class="so-nav-brand">{t.navBrand}</div>
+    <div class="so-nav-links">
+      <a class="so-nav-link so-active" href="#so-welcome">{t.navWelcome}</a>
+      <a class="so-nav-link" href="#so-projects">{t.navProjects}</a>
+      <a class="so-nav-link" href="#so-contact">{t.navContact}</a>
+    </div>
+  </nav>
+
+  <main class="so-scroll-container" id="main-content">
+    <section class="so-section so-hero-section" id="so-welcome" aria-labelledby="welcome-title">
+      <div class="so-section-content so-hero-layout">
+        <article class="so-neo-card so-bg-orange so-hero-card">
+          <div class="so-card-header"><span class="so-mono-text">{t.greetingBlockFirstCardHeader}</span></div>
+          <p class="so-kicker">{t.greetingBlockFirstCardAboveTitle}</p>
+          <h1 id="welcome-title">{t.greetingBlockFirstCardTitle}</h1>
+          <p>{t.greetingBlockFirstCardDescription}</p>
+          <div class="so-status-bar so-bg-green" role="status" aria-label="System status"><span>{t.greetingBlockFirstCardProgressBarLeft}</span><span>{t.greetingBlockFirstCardProgressBarRight}</span></div>
+        </article>
+
+        <section class="so-data-panel so-bg-cream so-telemetry" aria-labelledby="telemetry-title">
+          <div class="so-card-header"><span class="so-mono-text" id="telemetry-title">{t.greetingBlockSecondCardHeader}</span></div>
+          <dl>
+            <div><dt>{t.greetingBlockSecondCardBasePropName}</dt><dd>{t.greetingBlockSecondCardBase}</dd></div>
+            <div><dt>{t.greetingBlockSecondCardPrimaryPropName}</dt><dd>{t.greetingBlockSecondCardPrimary}</dd></div>
+            <div><dt>{t.greetingBlockSecondCardChannelPropName}</dt><dd>{t.greetingBlockSecondCardChannel}</dd></div>
+            <div><dt>{t.greetingBlockSecondCardThreatPropName}</dt><dd>{t.greetingBlockSecondCardThreat}</dd></div>
+          </dl>
+          <span class="so-signal-mark" aria-hidden="true">✳</span>
+        </section>
+      </div>
+      <span class="so-scroll-cue so-metadata">{t.greetingBlockScrollHint}</span>
+    </section>
+
+    <section class="so-section so-projects-section" id="so-projects" aria-labelledby="projects-title">
+      <div class="so-bg-video-wrapper" aria-hidden="true">
+        <video muted loop playsinline preload="none"><source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" /></video>
+        <div class="so-video-overlay"></div>
+      </div>
+      <div class="so-section-content so-projects-layout">
+        <header class="so-section-heading"><span class="so-mono-text">&gt; archive_index // 02</span><h2 id="projects-title">RECOVERED_PROJECTS</h2><p>Two active signals recovered from the local development archive.</p></header>
+        <div class="so-project-grid">
+          <article class="so-neo-card so-bg-yellow so-project-card">
+            <div class="so-card-header"><span class="so-mono-text">&gt; archive_load // FILE_01</span></div>
+            <h3>KOTCORE</h3>
+            <p>A lightweight 2D grid-based game engine for small worlds, built with Kotlin Multiplatform and Compose Canvas.</p>
+            <ul class="so-tag-list" aria-label="KotCore technologies"><li>KOTLIN</li><li>COMPOSE</li><li>KMP</li></ul>
+            <a class="so-neo-btn so-bg-green" href="https://github.com/yaroslavzghoba/KotCore" target="_blank" rel="noreferrer">PROJECT_DETAILS_&gt;</a>
+          </article>
+          <article class="so-neo-card so-bg-green so-project-card">
+            <div class="so-card-header"><span class="so-mono-text">&gt; archive_load // FILE_02</span></div>
+            <h3>PAPAGEI_BACKEND</h3>
+            <p>A Kotlin backend for HTTP and WebSockets, with Exposed ORM and PostgreSQL underneath the service surface.</p>
+            <ul class="so-tag-list" aria-label="Papagei Backend technologies"><li>KTOR</li><li>WEBSOCKETS</li><li>POSTGRES</li></ul>
+            <a class="so-neo-btn so-bg-yellow" href="https://github.com/papagei-service/backend" target="_blank" rel="noreferrer">PROJECT_DETAILS_&gt;</a>
+          </article>
+        </div>
+        <a class="so-neo-btn so-bg-cream so-template-link" href="templates.html">OPEN_TEMPLATE_ARCHIVE_&gt;</a>
+      </div>
+    </section>
+
+    <section class="so-section so-contact-section" id="so-contact" aria-labelledby="contact-title">
+      <article class="so-neo-card so-bg-cream so-contact-card">
+        <div class="so-card-header"><span class="so-mono-text">&gt; signal_broadcast // TX_READY</span></div>
+        <p class="so-kicker">OUTBOUND COMMUNICATION</p>
+        <h2 id="contact-title">OPEN_CHANNEL</h2>
+        <p>Terminal ready. For collaborations, questions, or a useful signal from the outside, transmit a message.</p>
+        <a class="so-neo-btn so-giant-btn so-bg-orange" href="mailto:yaroslavzghoba@gmail.com">[ SEND_E-MAIL ]</a>
+        <div class="so-contact-footer so-metadata"><span>TX: YAROSLAV_ZGHOBA</span><span>REPLY_WINDOW: 24H</span></div>
+      </article>
+    </section>
+  </main>
+</BaseLayout>
