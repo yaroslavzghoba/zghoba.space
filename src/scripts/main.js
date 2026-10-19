@@ -1,9 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const sysNav = document.querySelector('.so-sys-nav');
   const container = document.querySelector('.so-scroll-container');
   if (!container) return;
   const sections = [...document.querySelectorAll('.so-section')];
   const navLinks = [...document.querySelectorAll('.so-nav-link')];
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Exclude the possiblility for a part of section to be overlapped by the navigation bar.
+  if (sysNav) {
+    sysNav.style.width = `100%`;
+    const sysNavHeight = sysNav.offsetHeight;
+    sections.forEach((section) => {
+      section.style.minHeight = '100vh';
+      section.style.paddingTop = `${sysNavHeight}px`;
+    });
+  }
 
   const setActiveSection = (id) => {
     navLinks.forEach((link) => {
