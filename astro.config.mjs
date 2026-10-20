@@ -7,5 +7,8 @@ export default defineConfig({
     routing: {
       prefixDefaultLocale: false  // don't add a prefix for the default locale.
     }
-  }
+  },
+  
+  site: 'https://zghoba.space',   // the url address of the site.
+  base: '/',                      // the site location in the repo. 
 });
