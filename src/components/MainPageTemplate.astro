@@ -4,16 +4,23 @@ const { lang, t } = Astro.props;                       // get a locale and an ob
 ---
 
 <BaseLayout title={t.pageTitle} description={t.pageDescription} lang={lang}>
+
+  <!-- Navigation Bar -->
   <nav class="so-sys-nav" aria-label="Primary navigation">
     <div class="so-nav-brand">{t.navBrand}</div>
     <div class="so-nav-links">
       <a class="so-nav-link so-active" href="#so-welcome">{t.navWelcome}</a>
-      <a class="so-nav-link" href="#so-projects">{t.navProjects}</a>
+      <a class="so-nav-link" href="#so-project1">{t.navProject1}</a>
+      <a class="so-nav-link" href="#so-project2">{t.navProject2}</a>
+      <a class="so-nav-link" href="#so-project3">{t.navProject3}</a>
       <a class="so-nav-link" href="#so-contact">{t.navContact}</a>
     </div>
   </nav>
 
+  <!-- Main Content -->
   <main class="so-scroll-container" id="main-content">
+
+    <!-- Greeting Section -->
     <section class="so-section so-hero-section" id="so-welcome" aria-labelledby="welcome-title">
       <div class="so-section-content so-hero-layout">
         <article class="so-neo-card so-bg-orange so-hero-card">
@@ -21,7 +28,10 @@ const { lang, t } = Astro.props;                       // get a locale and an ob
           <p class="so-kicker">{t.greetingBlockFirstCardAboveTitle}</p>
           <h1 id="welcome-title">{t.greetingBlockFirstCardTitle}</h1>
           <p>{t.greetingBlockFirstCardDescription}</p>
-          <div class="so-status-bar so-bg-green" role="status" aria-label="System status"><span>{t.greetingBlockFirstCardProgressBarLeft}</span><span>{t.greetingBlockFirstCardProgressBarRight}</span></div>
+          <div class="so-status-bar so-bg-green" role="status" aria-label="System status">
+            <span>{t.greetingBlockFirstCardProgressBar[0]}</span>
+            <span>{t.greetingBlockFirstCardProgressBar[1]}</span>
+          </div>
         </article>
 
         <section class="so-data-panel so-bg-cream so-telemetry" aria-labelledby="telemetry-title">
@@ -38,41 +48,98 @@ const { lang, t } = Astro.props;                       // get a locale and an ob
       <span class="so-scroll-cue so-metadata">{t.greetingBlockScrollHint}</span>
     </section>
 
-    <section class="so-section so-projects-section" id="so-projects" aria-labelledby="projects-title">
+    <!-- Project 1 Section -->
+    <section class="so-section so-projects-section" id="so-project1" aria-labelledby="projects-title">
       <div class="so-bg-video-wrapper" aria-hidden="true">
         <video muted loop playsinline preload="none"><source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" /></video>
         <div class="so-video-overlay"></div>
       </div>
       <div class="so-section-content so-projects-layout">
-        <header class="so-section-heading"><span class="so-mono-text">&gt; archive_index // 02</span><h2 id="projects-title">RECOVERED_PROJECTS</h2><p>Two active signals recovered from the local development archive.</p></header>
-        <div class="so-project-grid">
-          <article class="so-neo-card so-bg-yellow so-project-card">
-            <div class="so-card-header"><span class="so-mono-text">&gt; archive_load // FILE_01</span></div>
-            <h3>KOTCORE</h3>
-            <p>A lightweight 2D grid-based game engine for small worlds, built with Kotlin Multiplatform and Compose Canvas.</p>
-            <ul class="so-tag-list" aria-label="KotCore technologies"><li>KOTLIN</li><li>COMPOSE</li><li>KMP</li></ul>
-            <a class="so-neo-btn so-bg-green" href="https://github.com/yaroslavzghoba/KotCore" target="_blank" rel="noreferrer">PROJECT_DETAILS_&gt;</a>
-          </article>
-          <article class="so-neo-card so-bg-green so-project-card">
-            <div class="so-card-header"><span class="so-mono-text">&gt; archive_load // FILE_02</span></div>
-            <h3>PAPAGEI_BACKEND</h3>
-            <p>A Kotlin backend for HTTP and WebSockets, with Exposed ORM and PostgreSQL underneath the service surface.</p>
-            <ul class="so-tag-list" aria-label="Papagei Backend technologies"><li>KTOR</li><li>WEBSOCKETS</li><li>POSTGRES</li></ul>
-            <a class="so-neo-btn so-bg-yellow" href="https://github.com/papagei-service/backend" target="_blank" rel="noreferrer">PROJECT_DETAILS_&gt;</a>
-          </article>
-        </div>
-        <a class="so-neo-btn so-bg-cream so-template-link" href="templates.html">OPEN_TEMPLATE_ARCHIVE_&gt;</a>
+        <header class="so-section-heading"><span class="so-mono-text">{t.firstProjectSectionHeader}</span><h2 id="projects-title">{t.firstProjectSectionTitle}</h2><p>{t.firstProjectSectionDescription}</p></header>
+        <article class="so-neo-card so-bg-sage so-project-card">
+          <div class="so-card-header"><span class="so-mono-text">{t.firstProjectCardHeader}</span></div>
+          <h3>{t.firstProjectCardTitle}</h3>
+          <p>{t.firstProjectCardDescription}</p>
+          <ul class="so-tag-list" aria-label="Papagei Backend technologies">
+            <li>{t.firstProjectCardTags[0]}</li>
+            <li>{t.firstProjectCardTags[1]}</li>
+            <li>{t.firstProjectCardTags[2]}</li>
+            <li>{t.firstProjectCardTags[3]}</li>
+            <li>{t.firstProjectCardTags[4]}</li>
+            <li>{t.firstProjectCardTags[5]}</li>
+          </ul>
+          <a class="so-neo-btn so-bg-yellow" href={t.firstProjectCardLink} target="_blank" rel="noreferrer">{t.firstProjectCardLinkText}</a>
+        </article>
       </div>
     </section>
 
+    <!-- Project 2 Section -->
+    <section class="so-section so-projects-section" id="so-project2" aria-labelledby="projects-title">
+      <div class="so-section-content so-projects-layout">
+        <article class="so-neo-card so-bg-yellow so-project-card">
+          <div class="so-card-header"><span class="so-mono-text">{t.secondProjectCardHeader}</span></div>
+          <h3>{t.secondProjectCardTitle}</h3>
+          <p>{t.secondProjectCardDescription}</p>
+          <ul class="so-tag-list" aria-label="KotCore technologies">
+            <li>{t.secondProjectCardTags[0]}</li>
+            <li>{t.secondProjectCardTags[1]}</li>
+            <li>{t.secondProjectCardTags[2]}</li>
+            <li>{t.secondProjectCardTags[3]}</li>
+            <li>{t.secondProjectCardTags[4]}</li>
+            <li>{t.secondProjectCardTags[5]}</li>
+          </ul>
+          <a class="so-neo-btn so-bg-sage" href={t.secondProjectCardLink} target="_blank" rel="noreferrer">{t.secondProjectCardLinkText}</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Project 3 Section -->
+    <section class="so-section so-projects-section" id="so-project3" aria-labelledby="projects-title">
+      <div class="so-bg-video-wrapper" aria-hidden="true">
+        <video muted loop playsinline preload="none"><source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" /></video>
+        <div class="so-video-overlay"></div>
+      </div>
+      <div class="so-section-content so-projects-layout">
+        <header class="so-section-heading"><span class="so-mono-text">{t.thirdProjectSectionHeader}</span><h2 id="projects-title">{t.thirdProjectSectionTitle}</h2><p>{t.thirdProjectSectionDescription}</p></header>
+        <div class="so-project-grid">
+          <article class="so-neo-card so-bg-green so-project-card">
+            <div class="so-card-header"><span class="so-mono-text">{t.thirdProjectFirstCardHeader}</span></div>
+            <h3>{t.thirdProjectFirstCardTitle}</h3>
+            <p>{t.thirdProjectFirstCardDescription}</p>
+            <ul class="so-tag-list" aria-label="KotCore technologies">
+              <li>{t.thirdProjectFirstCardTags[0]}</li>
+              <li>{t.thirdProjectFirstCardTags[1]}</li>
+              <li>{t.thirdProjectFirstCardTags[2]}</li>
+            </ul>
+            <a class="so-neo-btn so-bg-orange" href={t.thirdProjectFirstCardLink} target="_blank" rel="noreferrer">{t.thirdProjectFirstCardLinkText}</a>
+          </article>
+          <article class="so-neo-card so-bg-teal so-project-card">
+            <div class="so-card-header"><span class="so-mono-text">{t.thirdProjectSecondCardHeader}</span></div>
+            <h3>{t.thirdProjectSecondCardTitle}</h3>
+            <p>{t.thirdProjectSecondCardDescription}</p>
+            <ul class="so-tag-list" aria-label="Papagei Backend technologies">
+              <li>{t.thirdProjectSecondCardTags[0]}</li>
+              <li>{t.thirdProjectSecondCardTags[1]}</li>
+              <li>{t.thirdProjectSecondCardTags[2]}</li>
+              <li>{t.thirdProjectSecondCardTags[3]}</li>
+              <li>{t.thirdProjectSecondCardTags[4]}</li>
+            </ul>
+            <a class="so-neo-btn so-bg-yellow" href={t.thirdProjectSecondCardLink} target="_blank" rel="noreferrer">{t.thirdProjectSecondCardLinkText}</a>
+          </article>
+        </div>
+        <a class="so-neo-btn so-bg-cream so-template-link" href="templates.html">{t.thirdProjectSectionGetMoreBtn}</a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
     <section class="so-section so-contact-section" id="so-contact" aria-labelledby="contact-title">
       <article class="so-neo-card so-bg-cream so-contact-card">
-        <div class="so-card-header"><span class="so-mono-text">&gt; signal_broadcast // TX_READY</span></div>
-        <p class="so-kicker">OUTBOUND COMMUNICATION</p>
-        <h2 id="contact-title">OPEN_CHANNEL</h2>
-        <p>Terminal ready. For collaborations, questions, or a useful signal from the outside, transmit a message.</p>
-        <a class="so-neo-btn so-giant-btn so-bg-orange" href="mailto:yaroslavzghoba@gmail.com">[ SEND_E-MAIL ]</a>
-        <div class="so-contact-footer so-metadata"><span>TX: YAROSLAV_ZGHOBA</span><span>REPLY_WINDOW: 24H</span></div>
+        <div class="so-card-header"><span class="so-mono-text">{t.contactSectionCardHeader}</span></div>
+        <p class="so-kicker">{t.contactSectionCardSecondHeader}</p>
+        <h2 id="contact-title">{t.contactSectionCardTitle}</h2>
+        <p>{t.contactSectionCardDescription}</p>
+        <a class="so-neo-btn so-giant-btn so-bg-orange" href={t.contactSectionCardBtnLink}>{t.contactSectionCardBtnText}</a>
+        <div class="so-contact-footer so-metadata"><span>{t.contactSectionCardFooter[0]}</span><span>{t.contactSectionCardFooter[1]}</span></div>
       </article>
     </section>
   </main>

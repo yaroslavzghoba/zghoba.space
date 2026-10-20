@@ -1,4 +1,3 @@
-/* Portfolio composition: the visual language remains supplied by src/index.css. */
 .so-hero-section { background: linear-gradient(135deg, var(--so-color-bg-cream) 0 62%, var(--so-color-sage) 62% 100%); }
 .so-hero-layout { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(240px, 0.75fr); align-items: center; gap: var(--so-space-8); }
 .so-hero-card { transform: rotate(-1deg); }
@@ -20,6 +19,13 @@
 .so-contact-card { display: grid; gap: var(--so-space-6); max-width: 800px; }
 .so-contact-card p:not(.so-kicker) { color: var(--so-color-ink-soft); }
 .so-contact-footer { display: flex; justify-content: space-between; gap: var(--so-space-4); padding-top: var(--so-space-3); border-top: var(--so-border-thin); border-top-style: dashed; }
+/* Card colors. */
+.so-bg-sage { background: var(--so-color-sage); color: var(--so-color-white); }
+.so-bg-teal { background: var(--so-color-teal); color: var(--so-color-white); }
+.so-bg-sage p,
+.so-bg-teal p {
+  color: var(--so-color-white);
+}
 @media (max-width: 760px) {
   .so-hero-layout, .so-project-grid { grid-template-columns: 1fr; }
   .so-hero-card, .so-telemetry { transform: none; }
