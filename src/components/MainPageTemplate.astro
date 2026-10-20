@@ -24,28 +24,28 @@ const { lang, t } = Astro.props;                       // get a locale and an ob
     <section class="so-section so-hero-section" id="so-welcome" aria-labelledby="welcome-title">
       <div class="so-section-content so-hero-layout">
         <article class="so-neo-card so-bg-orange so-hero-card">
-          <div class="so-card-header"><span class="so-mono-text">{t.greetingBlockFirstCardHeader}</span></div>
-          <p class="so-kicker">{t.greetingBlockFirstCardAboveTitle}</p>
-          <h1 id="welcome-title">{t.greetingBlockFirstCardTitle}</h1>
-          <p>{t.greetingBlockFirstCardDescription}</p>
+          <div class="so-card-header"><span class="so-mono-text">{t.greetingSectionFirstCardHeader}</span></div>
+          <p class="so-kicker">{t.greetingSectionFirstCardAboveTitle}</p>
+          <h1 id="welcome-title">{t.greetingSectionFirstCardTitle}</h1>
+          <p>{t.greetingSectionFirstCardDescription}</p>
           <div class="so-status-bar so-bg-green" role="status" aria-label="System status">
-            <span>{t.greetingBlockFirstCardProgressBar[0]}</span>
-            <span>{t.greetingBlockFirstCardProgressBar[1]}</span>
+            <span>{t.greetingSectionFirstCardProgressBar[0]}</span>
+            <span>{t.greetingSectionFirstCardProgressBar[1]}</span>
           </div>
         </article>
 
         <section class="so-data-panel so-bg-cream so-telemetry" aria-labelledby="telemetry-title">
           <div class="so-card-header"><span class="so-mono-text" id="telemetry-title">{t.greetingBlockSecondCardHeader}</span></div>
           <dl>
-            <div><dt>{t.greetingBlockSecondCardBasePropName}</dt><dd>{t.greetingBlockSecondCardBase}</dd></div>
-            <div><dt>{t.greetingBlockSecondCardPrimaryPropName}</dt><dd>{t.greetingBlockSecondCardPrimary}</dd></div>
-            <div><dt>{t.greetingBlockSecondCardChannelPropName}</dt><dd>{t.greetingBlockSecondCardChannel}</dd></div>
-            <div><dt>{t.greetingBlockSecondCardThreatPropName}</dt><dd>{t.greetingBlockSecondCardThreat}</dd></div>
+            <div><dt>{t.greetingSectionSecondCardBasePropName}</dt><dd>{t.greetingSectionSecondCardBase}</dd></div>
+            <div><dt>{t.greetingSectionSecondCardPrimaryPropName}</dt><dd>{t.greetingSectionSecondCardPrimary}</dd></div>
+            <div><dt>{t.greetingSectionSecondCardChannelPropName}</dt><dd>{t.greetingSectionSecondCardChannel}</dd></div>
+            <div><dt>{t.greetingSectionSecondCardThreatPropName}</dt><dd>{t.greetingSectionSecondCardThreat}</dd></div>
           </dl>
           <span class="so-signal-mark" aria-hidden="true">✳</span>
         </section>
       </div>
-      <span class="so-scroll-cue so-metadata">{t.greetingBlockScrollHint}</span>
+      <span class="so-scroll-cue so-metadata">{t.greetingSectionScrollHint}</span>
     </section>
 
     <!-- Project 1 Section -->
