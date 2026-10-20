@@ -1,7 +1,7 @@
 {
   "name": "zghoba.space",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "node": ">=22.22.0"
   },
@@ -12,6 +12,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^7.4.0"
+    "astro": "^7.4.0",
+    "sys.override": "^1.2.0"
   }
 }

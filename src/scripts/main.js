@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = [...document.querySelectorAll('.so-nav-link')];
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // Navigation link highlighting
   const setActiveSection = (id) => {
     navLinks.forEach((link) => {
       const isActive = link.getAttribute('href') === `#${id}`;
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  // Section visibility control
   const sectionObserver = new IntersectionObserver((entries) => {
     const visible = entries
       .filter((entry) => entry.isIntersecting)
@@ -26,13 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
     .filter((link) => link.getAttribute('href').startsWith('#'))
     .forEach((link) => link.addEventListener('click', () => setActiveSection(link.getAttribute('href').slice(1))));
 
-  const mediaSection = document.querySelector('.so-projects-section');
-  const video = mediaSection?.querySelector('video');
-  if (!video || reduceMotion) return;
+  // Media playback control
+  const mediaSections = document.querySelectorAll('.so-projects-section');
+  const videos = [...mediaSections].flatMap((section) => [...section.querySelectorAll('video')]);
+  if (!videos.length || reduceMotion) return;
 
   const mediaObserver = new IntersectionObserver(([entry]) => {
-    if (entry.isIntersecting) video.play().catch(() => {});
-    else video.pause();
+    videos.forEach((video) => {
+      if (entry.isIntersecting) video.play().catch(() => {});
+      else video.pause();
+    });
   }, { root: container, threshold: 0.35 });
-  mediaObserver.observe(mediaSection);
+  mediaSections.forEach((section) => mediaObserver.observe(section));
 });
