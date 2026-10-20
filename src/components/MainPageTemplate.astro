@@ -28,19 +28,16 @@ const { lang, t } = Astro.props;                       // get a locale and an ob
           <p class="so-kicker">{t.greetingSectionFirstCardAboveTitle}</p>
           <h1 id="welcome-title">{t.greetingSectionFirstCardTitle}</h1>
           <p>{t.greetingSectionFirstCardDescription}</p>
-          <div class="so-status-bar so-bg-green" role="status" aria-label="System status">
-            <span>{t.greetingSectionFirstCardProgressBar[0]}</span>
-            <span>{t.greetingSectionFirstCardProgressBar[1]}</span>
-          </div>
+          <a class="so-neo-btn so-bg-yellow" href={t.greetingSectionFirstCardGetLinksBtnLink} target="_blank" rel="noreferrer">{t.greetingSectionFirstCardGetLinksBtnText}</a>
         </article>
 
         <section class="so-data-panel so-bg-cream so-telemetry" aria-labelledby="telemetry-title">
-          <div class="so-card-header"><span class="so-mono-text" id="telemetry-title">{t.greetingBlockSecondCardHeader}</span></div>
+          <div class="so-card-header"><span class="so-mono-text" id="telemetry-title">{t.greetingSectionSecondCardHeader}</span></div>
           <dl>
+            <div><dt>{t.greetingSectionSecondCardAgePropName}</dt><dd>{t.greetingSectionSecondCardAge}</dd></div>
             <div><dt>{t.greetingSectionSecondCardBasePropName}</dt><dd>{t.greetingSectionSecondCardBase}</dd></div>
             <div><dt>{t.greetingSectionSecondCardPrimaryPropName}</dt><dd>{t.greetingSectionSecondCardPrimary}</dd></div>
             <div><dt>{t.greetingSectionSecondCardChannelPropName}</dt><dd>{t.greetingSectionSecondCardChannel}</dd></div>
-            <div><dt>{t.greetingSectionSecondCardThreatPropName}</dt><dd>{t.greetingSectionSecondCardThreat}</dd></div>
           </dl>
           <span class="so-signal-mark" aria-hidden="true">✳</span>
         </section>
@@ -127,14 +124,14 @@ const { lang, t } = Astro.props;                       // get a locale and an ob
             <a class="so-neo-btn so-bg-yellow" href={t.thirdProjectSecondCardLink} target="_blank" rel="noreferrer">{t.thirdProjectSecondCardLinkText}</a>
           </article>
         </div>
-        <a class="so-neo-btn so-bg-cream so-template-link" href="templates.html">{t.thirdProjectSectionGetMoreBtn}</a>
+        <a class="so-neo-btn so-bg-cream so-template-link" href={t.thirdProjectSectionSeeMoreBtnLink}>{t.thirdProjectSectionSeeMoreBtnText}</a>
       </div>
     </section>
 
     <!-- Contact Section -->
     <section class="so-section so-contact-section" id="so-contact" aria-labelledby="contact-title">
       <article class="so-neo-card so-bg-cream so-contact-card">
-        <div class="so-card-header"><span class="so-mono-text">{t.contactSectionCardHeader}</span></div>
+        <div class="so-card-header"><span class="so-mono-text">{t.contactSectionCardFirstHeader}</span></div>
         <p class="so-kicker">{t.contactSectionCardSecondHeader}</p>
         <h2 id="contact-title">{t.contactSectionCardTitle}</h2>
         <p>{t.contactSectionCardDescription}</p>
