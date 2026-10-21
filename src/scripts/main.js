@@ -44,11 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const videos = [...mediaSections].flatMap((section) => [...section.querySelectorAll('video')]);
   if (!videos.length || reduceMotion) return;
 
-  const mediaObserver = new IntersectionObserver(([entry]) => {
-    videos.forEach((video) => {
-      if (entry.isIntersecting) video.play().catch(() => {});
-      else video.pause();
-    });
-  }, { root: container, threshold: 0.35 });
-  mediaSections.forEach((section) => mediaObserver.observe(section));
+  // Start every background video regardless of whether its section is active.
+  videos.forEach((video) => video.play().catch(() => {}));
 });
