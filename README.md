@@ -11,6 +11,16 @@ zghoba.space is Yaroslav Zghoba's personal developer portfolio, focused on Kotli
 
 This repository contains the Astro source for the website, including localized page content, shared layouts and components, global styling, client-side navigation behavior, and static assets.
 
+## 🚀 Project overview
+
+- **Multilingual portfolio** — English, German, and Ukrainian routes are available at `/`, `/de/`, and `/ua/`.
+- **Localized content model** — translated copy is kept in separate JSON locale files while the page structure is shared through one Astro template.
+- **Project showcase** — highlights backend services, a Kotlin Multiplatform 2D engine, CI/CD tooling, and a browser-based color utility.
+- **Focused single-page experience** — section-based navigation keeps the profile, projects, and contact information connected in one scrollable interface.
+- **Responsive visual system** — custom styles and the `sys.override` design system provide the interface's cards, typography, colors, and layout.
+- **Motion-aware interactions** — background media and section highlighting are controlled with browser APIs and respect `prefers-reduced-motion`.
+- **Static-first delivery** — Astro builds the site into a deployable `dist/` directory without a runtime backend.
+
 ## 🗂️ Project Structure
 
 ```text
@@ -26,16 +36,6 @@ This repository contains the Astro source for the website, including localized p
 ├── astro.config.mjs        # Astro and i18n configuration
 └── package.json             # Scripts, dependencies, and Node requirement
 ```
-
-## 🚀 Project overview
-
-- **Multilingual portfolio** — English, German, and Ukrainian routes are available at `/`, `/de/`, and `/ua/`.
-- **Localized content model** — translated copy is kept in separate JSON locale files while the page structure is shared through one Astro template.
-- **Project showcase** — highlights backend services, a Kotlin Multiplatform 2D engine, CI/CD tooling, and a browser-based color utility.
-- **Focused single-page experience** — section-based navigation keeps the profile, projects, and contact information connected in one scrollable interface.
-- **Responsive visual system** — custom styles and the `sys.override` design system provide the interface's cards, typography, colors, and layout.
-- **Motion-aware interactions** — background media and section highlighting are controlled with browser APIs and respect `prefers-reduced-motion`.
-- **Static-first delivery** — Astro builds the site into a deployable `dist/` directory without a runtime backend.
 
 ## ▶️ How to Run
 
