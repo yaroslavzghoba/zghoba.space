@@ -13,6 +13,7 @@ const { lang, t } = Astro.props;                       // get a locale and an ob
       <a class="so-nav-link" href="#so-project1">{t.navProject1}</a>
       <a class="so-nav-link" href="#so-project2">{t.navProject2}</a>
       <a class="so-nav-link" href="#so-project3">{t.navProject3}</a>
+      <a class="so-nav-link" href="#so-project4">{t.navProject4}</a>
       <a class="so-nav-link" href="#so-contact">{t.navContact}</a>
     </div>
   </nav>
@@ -73,11 +74,12 @@ const { lang, t } = Astro.props;                       // get a locale and an ob
     <!-- Project 2 Section -->
     <section class="so-section so-projects-section" id="so-project2" aria-labelledby="projects-title">
       <div class="so-bg-video-wrapper" aria-hidden="true">
-        <video muted loop playsinline preload="none"><source src="https://www.pexels.com/download/video/28077111/" type="video/mp4" /></video>
+        <video muted loop playsinline preload="none"><source src="https://www.pexels.com/download/video/40580584/" type="video/mp4" /></video>
         <div class="so-video-overlay"></div>
       </div>
       <div class="so-section-content so-projects-layout">
-        <article class="so-neo-card so-bg-yellow so-project-card">
+        <header class="so-section-heading"><span class="so-mono-text">{t.secondProjectSectionHeader}</span><h2 id="projects-title">{t.secondProjectSectionTitle}</h2><p>{t.secondProjectSectionDescription}</p></header>
+        <article class="so-neo-card so-bg-orange so-project-card">
           <div class="so-card-header"><span class="so-mono-text">{t.secondProjectCardHeader}</span></div>
           <h3>{t.secondProjectCardTitle}</h3>
           <p>{t.secondProjectCardDescription}</p>
@@ -87,9 +89,8 @@ const { lang, t } = Astro.props;                       // get a locale and an ob
             <li>{t.secondProjectCardTags[2]}</li>
             <li>{t.secondProjectCardTags[3]}</li>
             <li>{t.secondProjectCardTags[4]}</li>
-            <li>{t.secondProjectCardTags[5]}</li>
           </ul>
-          <a class="so-neo-btn so-bg-sage" href={t.secondProjectCardLink} target="_blank" rel="noreferrer">{t.secondProjectCardLinkText}</a>
+          <a class="so-neo-btn so-bg-yellow" href={t.secondProjectCardLink} target="_blank" rel="noreferrer">{t.secondProjectCardLinkText}</a>
         </article>
       </div>
     </section>
@@ -97,38 +98,64 @@ const { lang, t } = Astro.props;                       // get a locale and an ob
     <!-- Project 3 Section -->
     <section class="so-section so-projects-section" id="so-project3" aria-labelledby="projects-title">
       <div class="so-bg-video-wrapper" aria-hidden="true">
-        <video muted loop playsinline preload="none"><source src="https://www.pexels.com/download/video/40426495/" type="video/mp4" /></video>
+        <video muted loop playsinline preload="none"><source src="https://www.pexels.com/download/video/28077111/" type="video/mp4" /></video>
         <div class="so-video-overlay"></div>
       </div>
       <div class="so-section-content so-projects-layout">
         <header class="so-section-heading"><span class="so-mono-text">{t.thirdProjectSectionHeader}</span><h2 id="projects-title">{t.thirdProjectSectionTitle}</h2><p>{t.thirdProjectSectionDescription}</p></header>
+        <article class="so-neo-card so-bg-yellow so-project-card">
+          <div class="so-card-header"><span class="so-mono-text">{t.thirdProjectCardHeader}</span></div>
+          <h3>{t.thirdProjectCardTitle}</h3>
+          <p>{t.thirdProjectCardDescription}</p>
+          <ul class="so-tag-list" aria-label="KotCore technologies">
+            <li>{t.thirdProjectCardTags[0]}</li>
+            <li>{t.thirdProjectCardTags[1]}</li>
+            <li>{t.thirdProjectCardTags[2]}</li>
+            <li>{t.thirdProjectCardTags[3]}</li>
+            <li>{t.thirdProjectCardTags[4]}</li>
+            <li>{t.thirdProjectCardTags[5]}</li>
+          </ul>
+          <a class="so-neo-btn so-bg-sage" href={t.thirdProjectCardLink} target="_blank" rel="noreferrer">{t.thirdProjectCardLinkText}</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Project 4 Section -->
+    <section class="so-section so-projects-section" id="so-project4" aria-labelledby="projects-title">
+      <div class="so-bg-video-wrapper" aria-hidden="true">
+        <video muted loop playsinline preload="none"><source src="https://www.pexels.com/download/video/40426495/" type="video/mp4" /></video>
+        <div class="so-video-overlay"></div>
+      </div>
+      <div class="so-section-content so-projects-layout">
+        <header class="so-section-heading"><span class="so-mono-text">{t.fourthProjectSectionHeader}</span><h2 id="projects-title">{t.fourthProjectSectionTitle}</h2><p>{t.fourthProjectSectionDescription}</p></header>
         <div class="so-project-grid">
           <article class="so-neo-card so-bg-green so-project-card">
-            <div class="so-card-header"><span class="so-mono-text">{t.thirdProjectFirstCardHeader}</span></div>
-            <h3>{t.thirdProjectFirstCardTitle}</h3>
-            <p>{t.thirdProjectFirstCardDescription}</p>
+            <div class="so-card-header"><span class="so-mono-text">{t.fourthProjectFirstCardHeader}</span></div>
+            <h3>{t.fourthProjectFirstCardTitle}</h3>
+            <p>{t.fourthProjectFirstCardDescription}</p>
             <ul class="so-tag-list" aria-label="KotCore technologies">
-              <li>{t.thirdProjectFirstCardTags[0]}</li>
-              <li>{t.thirdProjectFirstCardTags[1]}</li>
-              <li>{t.thirdProjectFirstCardTags[2]}</li>
+              <li>{t.fourthProjectFirstCardTags[0]}</li>
+              <li>{t.fourthProjectFirstCardTags[1]}</li>
+              <li>{t.fourthProjectFirstCardTags[2]}</li>
+              <li>{t.fourthProjectFirstCardTags[3]}</li>
             </ul>
-            <a class="so-neo-btn so-bg-orange" href={t.thirdProjectFirstCardLink} target="_blank" rel="noreferrer">{t.thirdProjectFirstCardLinkText}</a>
+            <a class="so-neo-btn so-bg-orange" href={t.fourthProjectFirstCardLink} target="_blank" rel="noreferrer">{t.fourthProjectFirstCardLinkText}</a>
           </article>
           <article class="so-neo-card so-bg-teal so-project-card">
-            <div class="so-card-header"><span class="so-mono-text">{t.thirdProjectSecondCardHeader}</span></div>
-            <h3>{t.thirdProjectSecondCardTitle}</h3>
-            <p>{t.thirdProjectSecondCardDescription}</p>
+            <div class="so-card-header"><span class="so-mono-text">{t.fourthProjectSecondCardHeader}</span></div>
+            <h3>{t.fourthProjectSecondCardTitle}</h3>
+            <p>{t.fourthProjectSecondCardDescription}</p>
             <ul class="so-tag-list" aria-label="Papagei Backend technologies">
-              <li>{t.thirdProjectSecondCardTags[0]}</li>
-              <li>{t.thirdProjectSecondCardTags[1]}</li>
-              <li>{t.thirdProjectSecondCardTags[2]}</li>
-              <li>{t.thirdProjectSecondCardTags[3]}</li>
-              <li>{t.thirdProjectSecondCardTags[4]}</li>
+              <li>{t.fourthProjectSecondCardTags[0]}</li>
+              <li>{t.fourthProjectSecondCardTags[1]}</li>
+              <li>{t.fourthProjectSecondCardTags[2]}</li>
+              <li>{t.fourthProjectSecondCardTags[3]}</li>
+              <li>{t.fourthProjectSecondCardTags[4]}</li>
             </ul>
-            <a class="so-neo-btn so-bg-yellow" href={t.thirdProjectSecondCardLink} target="_blank" rel="noreferrer">{t.thirdProjectSecondCardLinkText}</a>
+            <a class="so-neo-btn so-bg-yellow" href={t.fourthProjectSecondCardLink} target="_blank" rel="noreferrer">{t.fourthProjectSecondCardLinkText}</a>
           </article>
         </div>
-        <a class="so-neo-btn so-bg-cream so-template-link" href={t.thirdProjectSectionSeeMoreBtnLink}>{t.thirdProjectSectionSeeMoreBtnText}</a>
+        <a class="so-neo-btn so-bg-cream so-template-link" href={t.fourthProjectSectionSeeMoreBtnLink}>{t.fourthProjectSectionSeeMoreBtnText}</a>
       </div>
     </section>
 
